@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zi Ling Teoh - AI Systems & Automation Engineer</title>
+    <meta name="description" content="AI Systems & Automation Engineer. Full lifecycle: build, deploy, operate, improve. Systems Engineering (Harvard E-178) · Engineering Economics (Harvard E-188) · MIT OCW Systems Thinking.">
+    <meta property="og:title" content="Zi Ling Teoh — AI Systems & Automation Engineer">
+    <meta property="og:description" content="Full lifecycle automation engineering. 7 automated data streams · 99%+ autonomous uptime · SHA-256 audit trail · formal SE methodology. Malaysia (GMT+8), remote contractor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zilingteoh97.github.io">
     <style>
         * {
             margin: 0;
@@ -347,6 +352,181 @@
             line-height: 1.8;
         }
 
+        /* METHODOLOGY TAG (pill badge on Decision Points) */
+        .method-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            background-color: rgba(26, 82, 118, 0.08);
+            color: var(--primary);
+            margin-left: 8px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+
+        /* APPROACH SECTION */
+        .approach-section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .vmodel-diagram {
+            background-color: var(--gray-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 32px 24px;
+            margin-bottom: 40px;
+        }
+
+        .vmodel-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0;
+            align-items: start;
+            font-size: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .vmodel-left, .vmodel-right {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .vmodel-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            min-height: 100%;
+        }
+
+        .vmodel-step {
+            background-color: white;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            padding: 12px 16px;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.4;
+            font-size: 12px;
+        }
+
+        .vmodel-step-label {
+            color: var(--mid);
+            font-size: 10px;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .vmodel-arrow {
+            color: var(--mid);
+            font-size: 11px;
+            text-align: center;
+            padding: 4px 0;
+        }
+
+        .vmodel-bridge {
+            font-size: 10px;
+            color: var(--mid);
+            text-align: center;
+            border-top: 1px dashed var(--border);
+            padding-top: 6px;
+            margin-top: 6px;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .principle-card {
+            padding: 20px;
+            background-color: var(--gray-bg);
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .principle-number {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .principle-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .principle-desc {
+            font-size: 12px;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+
+        .principle-evidence {
+            font-size: 11px;
+            color: var(--accent-1);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* TRACEABILITY MATRIX */
+        .trace-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        .trace-matrix th {
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--mid);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .trace-matrix td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .trace-matrix tr:last-child td {
+            border-bottom: none;
+        }
+
+        .trace-concept {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .trace-source {
+            font-size: 12px;
+            color: var(--mid);
+        }
+
+        .trace-evidence {
+            font-size: 12px;
+            color: var(--accent-1);
+        }
+
         /* METHODOLOGY SECTION */
         .methodology {
             padding: 60px 0;
@@ -578,6 +758,23 @@
                 padding: 40px 0;
             }
 
+            .approach-section {
+                padding: 40px 0;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vmodel-container {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .vmodel-center {
+                display: none;
+            }
+
             .methodology {
                 padding: 40px 0;
             }
@@ -741,8 +938,8 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-headline">I build automation systems that pay for themselves in month one.</h1>
-            <p class="hero-headline-2">Then I stay — because returns compound when the same engineer who built the system is the one improving it.</p>
+            <h1 class="hero-headline">AI Systems & Automation Engineering</h1>
+            <p class="hero-headline-2">Build. Deploy. Operate. Improve. — One contractor, full lifecycle.</p>
 
             <p class="hero-meta">Zi Ling Teoh · AI Systems & Automation Engineer · Malaysia (GMT+8)</p>
 
@@ -754,13 +951,13 @@
 
             <div class="value-cards">
                 <div class="value-card card-build">
-                    <strong>BUILD</strong><br>Manual process → automated pipeline. Weeks, not months.
+                    <strong>BUILD</strong><br>7 data streams automated · 3 departments served · SHA-256 audit trail · PII redaction at ingestion
                 </div>
                 <div class="value-card card-manage">
-                    <strong>MANAGE</strong><br>99%+ uptime without hiring an ops team.
+                    <strong>MANAGE</strong><br>99%+ autonomous uptime since 2024 · sole technical owner · zero handoff failures
                 </div>
                 <div class="value-card card-optimize">
-                    <strong>OPTIMIZE</strong><br>Systems that improve over time, not decay.
+                    <strong>OPTIMIZE</strong><br>Webhook upgrade path reserved · AI analytics layer independently scalable · V-model lifecycle applied
                 </div>
             </div>
         </div>
@@ -791,7 +988,7 @@
                     </div>
                 </div>
 
-                <p class="case-study-description">Sole technical owner of the company's operations automation initiative. Designed and deployed a production data pipeline integrating ERP, collaboration platform, and AI-driven analytics into a unified system. Architecture: Python middleware · REST API integration · incremental sync engine · scheduled automation · AI-powered analytics.</p>
+                <p class="case-study-description">Production data pipeline integrating ERP, collaboration platform, and AI-driven analytics. Single contractor scope: design, build, deploy, operate. Architecture: Python middleware · REST API integration · incremental sync engine · scheduled automation (APScheduler, 15-min cycles) · AI-powered analytics (SKU diagnostics, procurement intelligence).</p>
 
                 <div class="architecture-diagram">
                     <div class="diagram-container">
@@ -817,7 +1014,7 @@
                 <div class="decision-points">
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why self-hosted n8n over Make/Zapier?</span>
+                            <span>Why self-hosted n8n over Make/Zapier? <span class="method-tag">Cost Analysis</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -831,7 +1028,7 @@
 
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why 15-minute batch sync instead of real-time?</span>
+                            <span>Why 15-minute batch sync instead of real-time? <span class="method-tag">Requirements</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -845,7 +1042,7 @@
 
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why is the AI analytics layer independent from the sync pipeline?</span>
+                            <span>Why is the AI analytics layer independent from the sync pipeline? <span class="method-tag">Architecture</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -858,7 +1055,7 @@
                     </div>
                 </div>
 
-                <div class="bottom-line">One contractor. One monthly retainer. Three departments served. System running autonomously since deployment.</div>
+                <div class="bottom-line">One contractor. One monthly retainer. Three departments served. Deployed 2024. Zero-downtime autonomous operation since launch.</div>
             </div>
 
             <!-- CASE STUDY 2 -->
@@ -880,7 +1077,7 @@
                     </div>
                 </div>
 
-                <p class="case-study-description">Event-driven workflow engine for production deployment of AI agent pipelines. Built with compliance-grade security: append-only ledger with cryptographic hash chain, role-based access control, and PII redaction at the ingestion layer — not at query time.</p>
+                <p class="case-study-description">Event-driven workflow engine for AI agent pipelines. Architecture: append-only ledger with cryptographic hash chain (SHA-256), role-based access control (JWT/RBAC), PII redaction at the ingestion layer — not at query time. Multi-agent orchestration via Temporal with retry logic and async dispatch.</p>
 
                 <div class="architecture-diagram">
                     <div class="diagram-container">
@@ -906,7 +1103,7 @@
                 <div class="decision-points">
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why SHA-256 hash chain instead of traditional audit log?</span>
+                            <span>Why SHA-256 hash chain instead of traditional audit log? <span class="method-tag">Security</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -920,7 +1117,7 @@
 
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why PII redaction at ingestion, not at query time?</span>
+                            <span>Why PII redaction at ingestion, not at query time? <span class="method-tag">Risk Analysis</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -933,7 +1130,7 @@
                     </div>
                 </div>
 
-                <div class="bottom-line">Built compliance-ready infrastructure that typically requires a dedicated security team. Delivered as a solo contractor with AI-augmented workflow.</div>
+                <div class="bottom-line">SHA-256 hash chain · PII redaction at ingestion · RBAC + JWT · Temporal orchestration. Solo contractor delivery.</div>
             </div>
 
             <!-- CASE STUDY 3 -->
@@ -955,7 +1152,7 @@
                     </div>
                 </div>
 
-                <p class="case-study-description">End-to-end system design applying formal systems engineering methodology to Australian workplace compliance. Target: SMEs with 10-30 employees in trades/construction, multi-site hospitality, and allied health — the segment where compliance cost per employee is highest and in-house legal counsel is absent. Currently in design phase with L0-L2 complete.</p>
+                <p class="case-study-description">End-to-end system design applying formal systems engineering methodology to Australian workplace compliance. Target: SMEs with 10-30 employees in trades/construction, multi-site hospitality, and allied health — the segment where compliance cost per employee is highest and in-house legal counsel is absent. Requirements engineering and problem space analysis complete. Architecture phase in progress.</p>
 
                 <div class="architecture-diagram">
                     <div class="diagram-container">
@@ -980,7 +1177,7 @@
                 <div class="decision-points">
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why SSM + VSM instead of directly coding compliance rules?</span>
+                            <span>Why SSM + VSM instead of directly coding compliance rules? <span class="method-tag">Systems Thinking</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -994,7 +1191,7 @@
 
                     <div class="decision-point">
                         <div class="decision-header" onclick="toggleDecision(this)">
-                            <span>Why Nudge architecture with financial translation instead of enforcement?</span>
+                            <span>Why Nudge architecture with financial translation instead of enforcement? <span class="method-tag">Economics</span></span>
                             <span class="decision-toggle">▼</span>
                         </div>
                         <div class="decision-content">
@@ -1008,6 +1205,69 @@
                 </div>
 
                 <div class="bottom-line">Designed for the Australian SME market — where compliance complexity is highest and professional HR support is absent.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW I APPROACH EVERY PROJECT -->
+    <section class="approach-section">
+        <div class="container">
+            <h2 class="section-title">How I Approach Every Project</h2>
+
+            <div class="vmodel-diagram">
+                <div class="vmodel-container">
+                    <div class="vmodel-left">
+                        <div class="vmodel-step">Requirements<div class="vmodel-step-label">What does the business actually need?</div></div>
+                        <div class="vmodel-arrow">↓</div>
+                        <div class="vmodel-step">Architecture<div class="vmodel-step-label">How should the system be structured?</div></div>
+                        <div class="vmodel-arrow">↓</div>
+                        <div class="vmodel-step">Build<div class="vmodel-step-label">Implementation & integration</div></div>
+                    </div>
+                    <div class="vmodel-center">
+                        <div style="writing-mode: vertical-rl; text-orientation: mixed; color: var(--mid); font-size: 11px; letter-spacing: 2px; padding: 20px 0;">← traceability →</div>
+                    </div>
+                    <div class="vmodel-right">
+                        <div class="vmodel-step">Validate<div class="vmodel-step-label">Did we build the right system?</div></div>
+                        <div class="vmodel-arrow">↑</div>
+                        <div class="vmodel-step">Verify<div class="vmodel-step-label">Did we build the system right?</div></div>
+                        <div class="vmodel-arrow">↑</div>
+                        <div class="vmodel-step" style="border-color: var(--accent-1);">Optimize<div class="vmodel-step-label">Compound returns over time</div></div>
+                    </div>
+                </div>
+                <div class="vmodel-bridge">V-model lifecycle (E-178) — every phase on the left traces to a verification on the right</div>
+            </div>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-number">PATTERN 01 — REQUIREMENTS TRACEABILITY</div>
+                    <div class="principle-title">Design decisions trace to business needs</div>
+                    <div class="principle-desc">E-178: Every feature has a documented rationale. No capability exists without a traced requirement.</div>
+                    <div class="principle-evidence">Evidence: CS1 — 15-min sync justified by ERP rate limits + business decision cycle. CS3 — SSM maps stakeholder worldview before solution design.</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">PATTERN 02 — ALTERNATIVES ANALYSIS</div>
+                    <div class="principle-title">Significant choices evaluate multiple options</div>
+                    <div class="principle-desc">E-188 Decision Quality: Each decision documents alternatives, trade-offs, and selection rationale.</div>
+                    <div class="principle-evidence">Evidence: CS1 — n8n vs Make/Zapier cost comparison. CS2 — hash chain vs traditional audit log trade-off.</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">PATTERN 03 — RISK QUANTIFICATION</div>
+                    <div class="principle-title">Risks carry dollar values, not subjective ratings</div>
+                    <div class="principle-desc">E-188 Engineering Economics: Expected cost × probability. Enables stakeholders to compare options on the same scale.</div>
+                    <div class="principle-evidence">Evidence: CS2 — PII breach cost vs query flexibility trade-off. CS3 — award misclassification at $47K/year.</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-number">PATTERN 04 — FUNCTIONAL DECOMPOSITION</div>
+                    <div class="principle-title">Independent failure domains, independent deployment</div>
+                    <div class="principle-desc">E-178: Systems separated into modules that can fail, scale, and deploy independently.</div>
+                    <div class="principle-evidence">Evidence: CS1 — AI analytics layer decoupled from sync pipeline. CS2 — event bus separating ingestion from orchestration.</div>
+                </div>
+                <div class="principle-card" style="grid-column: 1 / -1; max-width: 50%; justify-self: center;">
+                    <div class="principle-number">PATTERN 05 — BUILT-IN OPTIONALITY</div>
+                    <div class="principle-title">Upgrade paths designed into initial architecture</div>
+                    <div class="principle-desc">MIT OCW Systems Thinking: Feedback loops and reserved interfaces prevent architectural lock-in.</div>
+                    <div class="principle-evidence">Evidence: CS1 — webhook trigger interface reserved for real-time upgrade. CS3 — methodology layers independently replaceable.</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1057,22 +1317,58 @@
                 </div>
 
                 <div class="methodology-column">
-                    <h3>Methodology</h3>
-                    <div class="methodology-description">
-                        <div class="methodology-item">
-                            <div class="methodology-item-title">Harvard CSCI E-178 — Systems Engineering</div>
-                            <div class="methodology-item-desc">V-model lifecycle · Requirements engineering · Functional architecture · V&V</div>
-                        </div>
-                        <div class="methodology-item">
-                            <div class="methodology-item-title">Harvard CSCI E-188 — Engineering Economics & Decision Analysis</div>
-                            <div class="methodology-item-desc">Decision Quality framework · Risk/uncertainty tiering · Trade-off analysis · Engineering economics</div>
-                        </div>
-                        <div class="methodology-item">
-                            <div class="methodology-item-title">MIT OpenCourseWare — Systems Thinking</div>
-                            <div class="methodology-item-desc">System Architecture · System Dynamics · Systems Engineering</div>
-                        </div>
-                    </div>
-                    <div class="methodology-footer">All methodologies actively applied to production systems and designs above.</div>
+                    <h3>Methodology — Traceability Matrix</h3>
+                    <table class="trace-matrix">
+                        <thead>
+                            <tr>
+                                <th>Concept</th>
+                                <th>Source</th>
+                                <th>Evidence on This Page</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="trace-concept">V-model lifecycle</td>
+                                <td class="trace-source">E-178</td>
+                                <td class="trace-evidence">CS3 full lifecycle design · Approach section diagram</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Requirements traceability</td>
+                                <td class="trace-source">E-178</td>
+                                <td class="trace-evidence">CS1 DP: 15-min sync rationale · Principle 01</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Functional decomposition</td>
+                                <td class="trace-source">E-178</td>
+                                <td class="trace-evidence">CS1 DP: Independent AI layer · Principle 04</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Decision Quality</td>
+                                <td class="trace-source">E-188</td>
+                                <td class="trace-evidence">All 7 Decision Points · Principle 02</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Risk quantification</td>
+                                <td class="trace-source">E-188</td>
+                                <td class="trace-evidence">CS2 DP: PII breach cost analysis · Principle 03</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Engineering Economics</td>
+                                <td class="trace-source">E-188</td>
+                                <td class="trace-evidence">CS1 DP: n8n cost comparison · CS3 financial translation</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Systems Thinking</td>
+                                <td class="trace-source">MIT OCW</td>
+                                <td class="trace-evidence">CS3 SSM→VSM→Nudge stack · Principle 05</td>
+                            </tr>
+                            <tr>
+                                <td class="trace-concept">Feedback loops</td>
+                                <td class="trace-source">MIT OCW</td>
+                                <td class="trace-evidence">BUILD→MANAGE→OPTIMIZE lifecycle · Principle 05</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -1081,35 +1377,32 @@
     <!-- WORKING WITH ME SECTION -->
     <section class="working-section">
         <div class="container">
-            <h2 class="section-title">Working With Me</h2>
-
-            <div class="working-intro">
-                <div class="working-intro-item">
-                    <h3>What you're getting:</h3>
-                    <p>A senior systems engineer who builds, manages, and optimizes — not a freelancer who builds and leaves.</p>
-                </div>
-                <div class="working-intro-item">
-                    <h3>What you're not paying for:</h3>
-                    <p>Recruitment fees. Benefits. Office space. Management overhead. A second engineer to maintain what the first one built.</p>
-                </div>
-            </div>
+            <h2 class="section-title">Engagement Spec</h2>
 
             <div class="working-details">
                 <div class="detail-item">
-                    <div class="detail-label">Timezone</div>
-                    <div class="detail-value">Malaysia (GMT+8) — full overlap with AEST/AEDT business hours</div>
+                    <div class="detail-label">Location</div>
+                    <div class="detail-value">Malaysia (GMT+8) · Full overlap with AEST/AEDT business hours</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">Delivery</div>
-                    <div class="detail-value">AI-augmented workflow (Claude + Cursor) — solo output comparable to a 3-5 person team</div>
+                    <div class="detail-label">Tooling</div>
+                    <div class="detail-value">Claude Code CLI · Cursor · n8n (self-hosted) · Python · TypeScript</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">Communication</div>
-                    <div class="detail-value">Daily async updates + 2-3x/week synchronous calls</div>
+                    <div class="detail-value">Daily async updates · 2-3x/week sync calls · Lark / Slack / Teams</div>
                 </div>
                 <div class="detail-item">
-                    <div class="detail-label">Engagement</div>
-                    <div class="detail-value">Monthly retainer — build, manage, optimize, repeat</div>
+                    <div class="detail-label">Model</div>
+                    <div class="detail-value">Monthly retainer · Same engineer builds, operates, and iterates</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Track Record</div>
+                    <div class="detail-value">CS1: autonomous since 2024 · CS2: compliance-grade security · CS3: formal SE methodology</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Availability</div>
+                    <div class="detail-value">Open to concurrent non-competing retainers</div>
                 </div>
             </div>
 
